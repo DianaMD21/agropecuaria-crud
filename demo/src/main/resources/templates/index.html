@@ -6,8 +6,8 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-<div>
-<table>
+<div class="container mt-4">
+<table class="table">
 <thead>
 <tr>
 	<th>ID</th>
@@ -17,11 +17,15 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
+<tr th:each="product:${products}">
+	<td>${product.idProduct}</td>
+	<td>${product.nameProduct}</td>
+	<td>${product.isCreated}</td>
+	<td>${product.myFormulas}</td>
+	<td>
+	<a class="btn btn-warning">Editar</a>
+	<a class="btn btn-danger">Eliminar</a>
+	</td>
 </tr>
 </tbody>
 </table>
