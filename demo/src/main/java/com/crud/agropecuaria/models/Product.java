@@ -2,8 +2,14 @@ package com.crud.agropecuaria.models;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="Product")
 public class Product {
-	private String idProduct;
+	private Long idProduct;
 	private String nameProduct;
 	private Boolean isCreated;
 	private List<Formula> myFormulas;
@@ -11,17 +17,17 @@ public class Product {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Product(String idProduct, String nameProduct, Boolean isCreated, List<Formula> myFormulas) {
+	public Product(Long idProduct, String nameProduct, Boolean isCreated, List<Formula> myFormulas) {
 		super();
 		this.idProduct = idProduct;
 		this.nameProduct = nameProduct;
 		this.isCreated = isCreated;
 		this.myFormulas = myFormulas;
 	}
-	public String getIdProduct() {
+	public Long getIdProduct() {
 		return idProduct;
 	}
-	public void setIdProduct(String idProduct) {
+	public void setIdProduct(Long idProduct) {
 		this.idProduct = idProduct;
 	}
 	public String getNameProduct() {

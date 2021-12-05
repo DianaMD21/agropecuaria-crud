@@ -3,13 +3,13 @@ package com.crud.agropecuaria.models;
 import java.util.List;
 
 public class Formula {
-	private String idProduct;
+	private Long idProduct;
 	private String idFormula;
 	private String name;
 	private Boolean isActive;
 	private List<Product> myPoducts;
 	
-	public Formula(String idProduct, String idFormula, String name, Boolean isActive, List<Product> myPoducts) {
+	public Formula(Long idProduct, String idFormula, String name, Boolean isActive, List<Product> myPoducts) {
 		super();
 		this.idProduct = idProduct;
 		this.idFormula = idFormula;
@@ -21,10 +21,10 @@ public class Formula {
 		super();
 	}
 	
-	public String getIdProduct() {
+	public Long getIdProduct() {
 		return idProduct;
 	}
-	public void setIdProduct(String idProduct) {
+	public void setIdProduct(Long idProduct) {
 		this.idProduct = idProduct;
 	}
 	public String getIdFormula() {
