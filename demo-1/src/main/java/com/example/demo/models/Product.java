@@ -1,6 +1,4 @@
-package com.crud.agropecuaria.models;
-
-import java.util.List;
+package com.example.demo.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,19 +14,18 @@ public class Product {
 	private Long idProduct;
 	private String nameProduct;
 	private Boolean isCreated;
-	private List<Formula> myFormulas;
-
+	
 	public Product() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Product(Long idProduct, String nameProduct, Boolean isCreated, List<Formula> myFormulas) {
+	public Product(Long idProduct, String nameProduct, Boolean isCreated) {
 		super();
 		this.idProduct = idProduct;
 		this.nameProduct = nameProduct;
 		this.isCreated = isCreated;
-		this.myFormulas = myFormulas;
+		
 	}
 
 	public Long getIdProduct() {
@@ -55,11 +52,5 @@ public class Product {
 		this.isCreated = isCreated;
 	}
 
-	public List<Formula> getMyFormulas() {
-		return myFormulas;
-	}
-
-	public void setMyFormulas(List<Formula> myFormulas) {
-		this.myFormulas = myFormulas;
-	}
+	
 }

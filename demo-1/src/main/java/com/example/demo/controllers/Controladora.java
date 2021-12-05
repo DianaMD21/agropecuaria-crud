@@ -1,4 +1,4 @@
-package com.crud.agropecuaria.controllers;
+package com.example.demo.controllers;
 
 import java.util.List;
 
@@ -8,16 +8,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.crud.agropecuaria.interfaceService.IProductService;
-import com.crud.agropecuaria.models.Product;
+import com.example.demo.interfaceService.IProductService;
+import com.example.demo.models.Product;
 
 @Controller
 @RequestMapping
-public class Controlador {
+public class Controladora {
 
-	public Controlador() {
-		// TODO Auto-generated constructor stub
-	}
 	@Autowired
 	private IProductService productService;
 	@GetMapping("/listar")

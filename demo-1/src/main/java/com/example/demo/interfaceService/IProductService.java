@@ -1,9 +1,9 @@
-package com.crud.agropecuaria.interfaceService;
+package com.example.demo.interfaceService;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.crud.agropecuaria.models.Product;
+import com.example.demo.models.Product;
 
 public interface IProductService {
 	public List<Product> getAll();

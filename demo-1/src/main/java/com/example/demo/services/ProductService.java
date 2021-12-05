@@ -1,4 +1,4 @@
-package com.crud.agropecuaria.services;
+package com.example.demo.services;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,16 +6,13 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.crud.agropecuaria.interfaceService.IProductService;
-import com.crud.agropecuaria.interfaces.IProduct;
-import com.crud.agropecuaria.models.Product;
+import com.example.demo.interfaceService.IProductService;
+import com.example.demo.interfaces.IProduct;
+import com.example.demo.models.Product;
 
 @Service
 public class ProductService implements IProductService {
 
-	public ProductService() {
-		// TODO Auto-generated constructor stub
-	}
 
 	@Autowired
 	private IProduct data;

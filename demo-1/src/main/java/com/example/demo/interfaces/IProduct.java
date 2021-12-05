@@ -1,9 +1,9 @@
-package com.crud.agropecuaria.interfaces;
+package com.example.demo.interfaces;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.crud.agropecuaria.models.Product;
+import com.example.demo.models.Product;
 
 @Repository
 public interface IProduct extends CrudRepository<Product, Long> {
