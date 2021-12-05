@@ -7,7 +7,7 @@ import com.example.demo.models.Product;
 
 public interface IProductService {
 	public List<Product> getAll();
-	public Optional<Product> getById(Long idProduct);
+	public Optional<Product> listarId(Long idProduct);
 	public int save(Product p);
-	public void delete(Product p);
+	public void delete(Long p);
 }

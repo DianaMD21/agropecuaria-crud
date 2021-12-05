@@ -24,19 +24,25 @@ public class ProductService implements IProductService {
 	}
 
 	@Override
-	public Optional<Product> getById(Long idProduct) {
-		// TODO Auto-generated method stub
+	public Optional<Product> listarId(Long idProduct) {
+		data.findById(idProduct);
 		return null;
 	}
 
 	@Override
 	public int save(Product p) {
 		// TODO Auto-generated method stub
-		return 0;
+		int res=0;
+		Product product=data.save(p);
+		if(!product.equals(null)) {
+			res=1;
+		}
+		return res;
 	}
 
 	@Override
-	public void delete(Product p) {
+	public void delete(Long id) {
+		data.deleteById(id);
 		// TODO Auto-generated method stub
 
 	}

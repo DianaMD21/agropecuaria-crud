@@ -7,28 +7,35 @@
 </head>
 <body>
 <div class="container mt-4">
+<a th:href ="@{/new}" class="btn btn-primary">Nuevo</a>
 <table class="table">
 <thead>
 <tr>
 	<th>ID</th>
 	<th>Nombre</th>
 	<th>Creable</th>
-	<th>Formulas</th>
+	
 </tr>
 </thead>
 <tbody>
 <tr th:each="product:${products}">
-	<td>${product.idProduct}</td>
-	<td>${product.nameProduct}</td>
-	<td>${product.isCreated}</td>
-	<td>${product.myFormulas}</td>
+	<td th:text="${product.idProduct}"></td>
+	<td th:text="${product.nameProduct}"></td>
+	<td th:text="${product.isCreated}"></td>
+	
 	<td>
-	<a class="btn btn-warning">Editar</a>
-	<a class="btn btn-danger">Eliminar</a>
+	<a th:href="@{/editar/}+${product.idProduct}"  class="btn btn-warning">Editar</a>
+	<!--  <a th:onclick="eliminar([[${product.idProduct}]])"  class="btn btn-warning">Eliminar</a>-->
+	<a th:href ="@{/eliminar/}+${product.idProduct}" class="btn btn-danger">Eliminar</a>
 	</td>
 </tr>
 </tbody>
 </table>
 </div>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="/funciones.js"></script>
 </body>
 </html>
