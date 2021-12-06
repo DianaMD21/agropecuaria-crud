@@ -40,14 +40,14 @@ public class Controladora {
 		
 	}
 	
-	@GetMapping("/editar/{idProduct}")
+	@GetMapping("/editar/{idExisProduct}")
 	public String editar(@PathVariable Long idExisProduct ,Model model) {
 		Optional<ExistenciaProducto> product=existenciaProductService.listarId(idExisProduct);
 		model.addAttribute("product", product);
 		return  "form";
 	}
 	
-	@GetMapping("/eliminar/{idProduct}")
+	@GetMapping("/eliminar/{idExisProduct}")
 	public String delete(@PathVariable Long idExisProduct, Model model) {
 		existenciaProductService.delete(idExisProduct);
 		return "redirect:/listar";
