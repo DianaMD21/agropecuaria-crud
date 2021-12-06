@@ -25,4 +25,3 @@ function eliminar(id) {
 		  } 
 		});
 }
-
