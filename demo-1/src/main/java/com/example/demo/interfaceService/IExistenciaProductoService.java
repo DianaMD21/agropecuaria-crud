@@ -7,7 +7,7 @@ import com.example.demo.models.ExistenciaProducto;
 
 public interface IExistenciaProductoService {
 	public List<ExistenciaProducto> getAll();
-	public Optional<ExistenciaProducto> listarId(Long idProduct);
+	public Optional<ExistenciaProducto> listarId(Long idExisProduct);
 	public int save(ExistenciaProducto p);
 	public void delete(Long p);
 }

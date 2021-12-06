@@ -41,15 +41,15 @@ public class Controladora {
 	}
 	
 	@GetMapping("/editar/{idProduct}")
-	public String editar(@PathVariable Long idProduct ,Model model) {
-		Optional<ExistenciaProducto> product=existenciaProductService.listarId(idProduct);
+	public String editar(@PathVariable Long idExisProduct ,Model model) {
+		Optional<ExistenciaProducto> product=existenciaProductService.listarId(idExisProduct);
 		model.addAttribute("product", product);
 		return  "form";
 	}
 	
 	@GetMapping("/eliminar/{idProduct}")
-	public String delete(@PathVariable Long idProduct, Model model) {
-		existenciaProductService.delete(idProduct);
+	public String delete(@PathVariable Long idExisProduct, Model model) {
+		existenciaProductService.delete(idExisProduct);
 		return "redirect:/listar";
 		
 	}

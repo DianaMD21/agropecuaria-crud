@@ -24,8 +24,8 @@ public class ExistenciaProductoService implements IExistenciaProductoService {
 	}
 
 	@Override
-	public Optional<ExistenciaProducto> listarId(Long idProduct) {
-		data.findById(idProduct);
+	public Optional<ExistenciaProducto> listarId(Long idExisProduct) {
+		data.findById(idExisProduct);
 		return null;
 	}
 

@@ -11,7 +11,8 @@ import javax.persistence.Table;
 public class ExistenciaProducto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long idProduct;
+	private Long idExisProduct;
+	private String idProduct;
 	private String idSuplidor;
 	private String unidadMedida;
 	private float valorUnidad;
@@ -22,22 +23,23 @@ public class ExistenciaProducto {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ExistenciaProducto(Long idProduct, String idSuplidor, String unidadMedida, float valorUnidad, int cantidad) {
+	public ExistenciaProducto(Long idExisProduct,String idProduct, String idSuplidor, String unidadMedida, float valorUnidad, int cantidad) {
 		super();
-		this.idProduct = idProduct;
+		this.idExisProduct = idExisProduct;
 		this.idSuplidor=idSuplidor;
 		this.unidadMedida=unidadMedida;
 		this.valorUnidad=valorUnidad;
 		this.cantidad=cantidad;
+		this.idProduct=idProduct;
 		
 	}
 
-	public Long getIdProduct() {
-		return idProduct;
+	public Long getIdExisProduct() {
+		return idExisProduct;
 	}
 
-	public void setIdProduct(Long idProduct) {
-		this.idProduct = idProduct;
+	public void setIdExisProduct(Long idProduct) {
+		this.idExisProduct = idProduct;
 	}
 
 	public String getUnidadMedida() {
@@ -70,6 +72,14 @@ public class ExistenciaProducto {
 
 	public void setCantidad(float cantidad) {
 		this.cantidad = cantidad;
+	}
+
+	public String getIdProduct() {
+		return idProduct;
+	}
+
+	public void setIdProduct(String idProduct) {
+		this.idProduct = idProduct;
 	}
 
 	

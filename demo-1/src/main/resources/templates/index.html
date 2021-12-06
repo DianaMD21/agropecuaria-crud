@@ -12,6 +12,7 @@
 <thead>
 <tr>
 	<th>Id Existencia</th>
+	<th>Id Producto</th>
 	<th>Id Suplidor</th>
 	<th>Unidad de Medida</th>
 	<th>Cantidad</th>
@@ -21,6 +22,7 @@
 </thead>
 <tbody>
 <tr th:each="product:${products}">
+	<td th:text="${product.idExisProduct}"></td>
 	<td th:text="${product.idProduct}"></td>
 	<td th:text="${product.idSuplidor}"></td>
 	<td th:text="${product.unidadMedida}"></td>
@@ -28,9 +30,9 @@
 	<td th:text="${product.valorUnidad}"></td>
 	
 	<td>
-	<a th:href="@{/editar/}+${product.idProduct}"  class="btn btn-warning">Editar</a>
-	<!--  <a th:onclick="eliminar([[${product.idProduct}]])"  class="btn btn-warning">Eliminar</a>-->
-	<a th:href ="@{/eliminar/}+${product.idProduct}" class="btn btn-danger">Eliminar</a>
+	<a th:href="@{/editar/}+${product.idExisProduct}"  class="btn btn-warning">Editar</a>
+	<!--  <a th:onclick="eliminar([[${product.idExisProduct}]])"  class="btn btn-warning">Eliminar</a>-->
+	<a th:href ="@{/eliminar/}+${product.idExisProduct}" class="btn btn-danger">Eliminar</a>
 	</td>
 </tr>
 </tbody>
