@@ -11,17 +11,21 @@
 <table class="table">
 <thead>
 <tr>
-	<th>ID</th>
-	<th>Nombre</th>
-	<th>Creable</th>
+	<th>Id Existencia</th>
+	<th>Id Suplidor</th>
+	<th>Unidad de Medida</th>
+	<th>Cantidad</th>
+	<th>Valor por Unidad</th>
 	
 </tr>
 </thead>
 <tbody>
 <tr th:each="product:${products}">
 	<td th:text="${product.idProduct}"></td>
-	<td th:text="${product.nameProduct}"></td>
-	<td th:text="${product.isCreated}"></td>
+	<td th:text="${product.idSuplidor}"></td>
+	<td th:text="${product.unidadMedida}"></td>
+	<td th:text="${product.cantidad}"></td>
+	<td th:text="${product.valorUnidad}"></td>
 	
 	<td>
 	<a th:href="@{/editar/}+${product.idProduct}"  class="btn btn-warning">Editar</a>

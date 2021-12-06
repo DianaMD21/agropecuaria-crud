@@ -12,44 +12,44 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.interfaceService.IProductService;
-import com.example.demo.models.Product;
+import com.example.demo.interfaceService.IExistenciaProductoService;
+import com.example.demo.models.ExistenciaProducto;
 
 @Controller
 @RequestMapping
 public class Controladora {
 
 	@Autowired
-	private IProductService productService;
+	private IExistenciaProductoService existenciaProductService;
 	@GetMapping("/listar")
 	public String getAll(Model model) {
-		List<Product>products=productService.getAll();
+		List<ExistenciaProducto>products=existenciaProductService.getAll();
 		model.addAttribute("products", products);
 		return "index";
 	}
 	
 	@GetMapping("/new")
 	public String create(Model model) {
-		model.addAttribute("product", new Product());
+		model.addAttribute("product", new ExistenciaProducto());
 		return "form";
 	}
 	@PostMapping("/save")
-	public String save(@Validated Product p, Model model) {
-		productService.save(p);
+	public String save(@Validated ExistenciaProducto p, Model model) {
+		existenciaProductService.save(p);
 		return "redirect:/listar";
 		
 	}
 	
 	@GetMapping("/editar/{idProduct}")
 	public String editar(@PathVariable Long idProduct ,Model model) {
-		Optional<Product> product=productService.listarId(idProduct);
+		Optional<ExistenciaProducto> product=existenciaProductService.listarId(idProduct);
 		model.addAttribute("product", product);
 		return  "form";
 	}
 	
 	@GetMapping("/eliminar/{idProduct}")
 	public String delete(@PathVariable Long idProduct, Model model) {
-		productService.delete(idProduct);
+		existenciaProductService.delete(idProduct);
 		return "redirect:/listar";
 		
 	}

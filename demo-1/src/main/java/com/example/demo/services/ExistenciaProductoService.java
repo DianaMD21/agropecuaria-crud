@@ -6,34 +6,34 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.interfaceService.IProductService;
-import com.example.demo.interfaces.IProduct;
-import com.example.demo.models.Product;
+import com.example.demo.interfaceService.IExistenciaProductoService;
+import com.example.demo.interfaces.IExistenciaProducto;
+import com.example.demo.models.ExistenciaProducto;
 
 @Service
-public class ProductService implements IProductService {
+public class ExistenciaProductoService implements IExistenciaProductoService {
 
 
 	@Autowired
-	private IProduct data;
+	private IExistenciaProducto data;
 
 	@Override
-	public List<Product> getAll() {
+	public List<ExistenciaProducto> getAll() {
 		// TODO Auto-generated method stub
-		return (List<Product>) data.findAll();
+		return (List<ExistenciaProducto>) data.findAll();
 	}
 
 	@Override
-	public Optional<Product> listarId(Long idProduct) {
+	public Optional<ExistenciaProducto> listarId(Long idProduct) {
 		data.findById(idProduct);
 		return null;
 	}
 
 	@Override
-	public int save(Product p) {
+	public int save(ExistenciaProducto p) {
 		// TODO Auto-generated method stub
 		int res=0;
-		Product product=data.save(p);
+		ExistenciaProducto product=data.save(p);
 		if(!product.equals(null)) {
 			res=1;
 		}
